@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <h1>{{ movie.title }}</h1>
+    <img src="{{ movie.poster.url }}" alt="dlnjdfjlgd">
+    <p><strong>Год выпуска:</strong> {{ movie.release_date }}</p>
+    <p><strong>Жанр:</strong> {{ movie.genre }}</p>
+    <p><strong>Описание:</strong> {{ movie.description }}</p>
+    <a href="{% url 'movie_list' %}">Назад к списку</a>
+{% endblock %}
